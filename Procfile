@@ -1,1 +1,1 @@
-web: node handlebars/web.js
+web: node web.js
