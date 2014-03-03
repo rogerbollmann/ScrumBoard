@@ -1,0 +1,1 @@
+web: node handlebars/web.js
