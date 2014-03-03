@@ -7,4 +7,7 @@
     "express": "3.x",
     "hbs": "*"
   }
+  "engines": {
+    "node": "0.10.x"
+  }
 }
