@@ -6,8 +6,8 @@ Für das Scrum Board werden Backbone.js und Node.js eingesetzt. Die Tests werden 
 Backbone.js:
 Backbone wird für das clientseitige erstellen von Model-View-Controller verwendet. Wobei in Backbone heissen diese Model-View-Collection.
 
-Node.js:
-Das Node js wird für das Backend verwendet für den Webserver
+REST API:
+Ich habe die Vorhandene REST API auf meine Task angepasst und man kann nun mit /tasks die JSON Objekte anschauen.
 
 Jasmine:
 Um tests durchzuführen wird Jasmine verwendet.

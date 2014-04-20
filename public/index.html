@@ -30,11 +30,18 @@
     </div>
     
     <div >
-        Beschreibung: <input id="new-task-description" class="form-control" type="text" placeholder="Beschreibung" required>
+        Beschreibung: <textarea id="new-task-description" class="form-control" placeholder="Beschreibung" rows="3"></textarea>
     </div>
-    <div >
-        Aufwandschätzung: <input id="new-task-estimation" class="form-control" type="text" placeholder="Aufwandschätzung" required>
-    </div>
+    
+    <div> Aufwandschätzung: <select class="form-control" id="new-task-estimation">
+    <option value="1">One</option>
+    <option value="2">Two</option>
+    <option value="3">Three</option>
+    <option value="5">Five</option>
+    <option value="8">Eigth</option>
+    </select>
+    
+    
     <div>
         Zuweisen: <input id="new-task-assigned" class="form-control"  type="text" placeholder="Zuweisen" required>
     </div>
