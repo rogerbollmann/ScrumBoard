@@ -20,5 +20,6 @@ CSS Framework
 
 
 
-Ausbaumöglichkeiten
+Ausbaumöglichkeiten:
+
 Nach ca. 15 Stunden Arbeit habe ich mich nicht mehr mit WebSocket beschäftigen. Ich habe die vorhandene Todo-App von Ihnen verwendet und darum ist nun auch die ganze Logik im Index.js. Dazu konnte ich nun auch nicht mehr die Zeit aufbringen, um mich mit require.js auseinander zusetzen, damit ich den Code nun schön aufteilen könnte. Dazu möchte ich noch erwähnen, dass ich mich nicht besonders auf das Design konzentriert habe.
