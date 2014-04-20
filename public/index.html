@@ -67,17 +67,16 @@
 
 <script type="text/template" id="item-template">
 
-<%console.log('hello0');
+<%
 for(var i=0; i < tasks.length; i++) {
     var task = tasks[i].toJSON();
-    console.log('cyril' +  tasks[i].cid);
 %> 
 <li data-model-id="<%=tasks[i].cid%>"><%=task.cid%>
        <div class="view-title">Titel: <%= task.title %></div>
-       <input class="edit-title" id="ed-title" type="text" value="<%= task.title %>" />
+       <input class="edit-title" type="text" value="<%= task.title %>" />
        
        <div class="view-description">Beschreibung: <%= task.description %></div>
-       <input class="edit-description" id="ed-description" type="text" value="<%= task.description %>" />
+       <input class="edit-description" type="text" value="<%= task.description %>" />
 
         <div class="view-estimation">Aufwandschätzung: <%= task.estimation %></div>
         <input class="edit-estimation" id="ed-estimation" type="text" value="<%= task.estimation %>" />

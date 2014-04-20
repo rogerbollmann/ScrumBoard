@@ -74,7 +74,7 @@ App.View = {};
 
     events: {
       //"dblclick .view": "edit",
-      "keypress .grpedit": "updateOnEnter",
+      //"keypress .grpedit": "updateOnEnter",
       "keypress .edit": "updateOnEnter",
       "blur .edit": "close",
       "click .moveRight": "moveRight",
@@ -97,20 +97,20 @@ App.View = {};
     },
 
     render: function () {
-      console.log("Bollmann "+this.$el);
+      //console.log("Bollmann "+this.$el);
       
       $('#task-list-open').html(this.template({tasks: this.model.getOpenTask()}));
       $('#task-list-inprogress').html(this.template({tasks: this.model.getInProgressTask()}));
       $('#task-list-completed').html(this.template({tasks: this.model.getCompletedTask()}));
       this.$el.html(this.template(this.model.toJSON()));
       //this.$el.toggleClass('done', this.model.get('done'));
-      this.input = this.$('.edit');
-      this.description = this.$('#ed-description');
-      this.estimation = this.$('#ed-estimation');
-      this.assigned = this.$('#ed-assigned');
+      /**this.input = this.$('.edit');
+      this.description = this.$('ed-description');
+      this.estimation = this.$('ed-estimation');
+      this.assigned = this.$('ed-assigned');**/
       return this;
     },
-    toggleDone: function () {
+    /**toggleDone: function () {
       console.log('toggle model');
       this.model.toggle();
     },
@@ -127,7 +127,7 @@ App.View = {};
         this.model.save({title: value});
         this.$el.removeClass("editing");
       }
-    },
+    },**/
     
     closeTitle: function (event) {
         var value = $(event.currentTarget).val();
@@ -256,10 +256,10 @@ App.View = {};
       console.log('showing all tasks');
       this.app.showAll();
     },
-    showFirstTasks: function() {
+    /**showFirstTasks: function() {
         console.log('showing all tasks');
         this.app.showFirst();
-      },
+      },**/
     showOpenTasks: function() {
       console.log('showing open task');
       this.app.showOpen();
