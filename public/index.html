@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Tasks</title>
+    <link rel="stylesheet" href="index.css"/>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+    <script src="js/jquery-2.1.0.js"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    
+    
+</head>
+
+<body>
+
+<div id="modal"></div>
+
+<h1>Task List</h1>
+<h2>Adding a new Task</h2>
+<div id="taskapp">
+    <div>
+        Titel :<input id="new-task" type="text"  class="form-control"  placeholder="Titel" required>
+    </div>
+    
+    <div >
+        Beschreibung: <input id="new-task-description" class="form-control" type="text" placeholder="Beschreibung" required>
+    </div>
+    <div >
+        Aufwandschätzung: <input id="new-task-estimation" class="form-control" type="text" placeholder="Aufwandschätzung" required>
+    </div>
+    <div>
+        Zuweisen: <input id="new-task-assigned" class="form-control"  type="text" placeholder="Zuweisen" required>
+    </div>
+    <div>
+        <input id="add-item" type="button" class="btn btn-default navbar-btn" value="Submit">
+    </div>
+    
+
+    <div class="row" id="Scrum">
+        <div class="col-md-4">
+            <div>Open</div>
+            <ul id="task-list-open"></ul>
+        </div>
+        <div class="col-md-4">
+            <div>In Progress</div>
+            <ul id="task-list-inprogress"></ul>
+        </div>
+        <div class="col-md-4">
+            <div>Completed</div>
+            <ul id="task-list-completed"></ul>
+        </div>
+    </div>
+
+    <ul id="task-list"></ul>
+
+
+</div>
+
+
+
+<script type="text/template" id="item-template">
+
+<%console.log('hello0');
+for(var i=0; i < tasks.length; i++) {
+    var task = tasks[i].toJSON();
+    console.log('cyril' +  tasks[i].cid);
+%> 
+<li data-model-id="<%=tasks[i].cid%>"><%=task.cid%>
+       <div class="view-title">Titel: <%= task.title %></div>
+       <input class="edit-title" id="ed-title" type="text" value="<%= task.title %>" />
+       
+       <div class="view-description">Beschreibung: <%= task.description %></div>
+       <input class="edit-description" id="ed-description" type="text" value="<%= task.description %>" />
+
+        <div class="view-estimation">Aufwandschätzung: <%= task.estimation %></div>
+        <input class="edit-estimation" id="ed-estimation" type="text" value="<%= task.estimation %>" />
+            
+        <div class="view-assigned" >Zugewiesen an: <%= task.assigned %></div>
+        <div class="edit-assigned" id="ed-assigned">Zugewiesen an: <input type="text" value="<%= task.assigned %>" /></div>
+        
+        <span>Status: <%= task.status %></span>
+          
+        <% if(task.status != 'open'){ %>
+        <span class="glyphicon glyphicon-chevron-left moveLeft"  />
+        <%}%>
+        <% if (task.status != 'completed') {%>
+        <span class="glyphicon glyphicon-chevron-right moveRight" />
+        <%}%>
+        <span class="glyphicon glyphicon-trash deleteItem"/>
+        
+ </li>       
+
+    </div>
+
+<% }%> 
+</script>
+
+
+<script src="js/underscore.js"></script>
+<script src="js/backbone.js"></script>
+<script src="index.js"></script>
+
+
+</body>
+</html>
