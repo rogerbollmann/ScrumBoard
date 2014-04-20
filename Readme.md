@@ -1,7 +1,7 @@
 ScrumBoard
 
 Beschreibung:
-Für das Scrum Board werden Backbone.js und Node.js eingesetzt. Die Tests werden automatisiert durch Jasmine ausgeführt und dargestellt. Mit dem Scrum Board ist es möglich ein neuen Task zu erstellen und zu editieren. (leider funktioniert nur das editieren vom Titel, jedoch hat es mal für alle funktioniert). Zusätzlich können die einzelnen Tasks auch gelöscht werden mit dem Lösch-Element. Dazu können die Tasks, wenn sie in Bearbeitung sind nach "In Progress" und falls sie fertig sind nach "Completed" verschoben werden und wieder zurück.
+Für das Scrum Board werden Backbone.js und Node.js eingesetzt. Die Tests werden automatisiert durch Jasmine ausgeführt und dargestellt. Mit dem Scrum Board ist es möglich ein neuen Task zu erstellen und zu editieren (doppelklick auf den Value der Karte). Zusätzlich können die einzelnen Tasks auch gelöscht werden mit dem Lösch-Element. Dazu können die Tasks, wenn sie in Bearbeitung sind nach "In Progress" und falls sie fertig sind nach "Completed" verschoben werden und wieder zurück.
 
 Verwendung von Komponenten
 

@@ -4,6 +4,8 @@ App = {};
 App.Model = {};
 App.Collection = {};
 App.View = {};
+
+
 // Model
 
   App.Model.Task = Backbone.Model.extend({
@@ -64,7 +66,7 @@ App.View = {};
   });
 
 
-
+    // View for list all task into the seperate colums
 
   App.View.TaskView = Backbone.View.extend({
 
@@ -152,12 +154,12 @@ App.View = {};
             $(event.currentTarget).parent().removeClass("editing-description");
         }
     },
-    editDescription: function(){
+    editDescription: function(event){
         console.log("adding editing Description");
         $(event.currentTarget).parent().addClass("editing-description");
         $(event.currentTarget).focus();
     },
-    closeEstimation: function () {
+    closeEstimation: function (event) {
         var value = $(event.currentTarget).val();
         if (!value) {
             this.clear();
@@ -166,12 +168,12 @@ App.View = {};
             $(event.currentTarget).parent().removeClass("editing-estimation");
         }
     },
-    editEstimation: function(){
+    editEstimation: function(event){
         console.log("adding editing Estimation");
         $(event.currentTarget).parent().addClass("editing-estimation");
         $(event.currentTarget).focus();
     },
-    closeAssigned: function () {
+    closeAssigned: function (event) {
         var value = $(event.currentTarget).val();
         if (!value) {
             this.clear();
@@ -180,7 +182,7 @@ App.View = {};
             $(event.currentTarget).parent().removeClass("editing-assigned");
         }
     },
-    editAssigned: function(){
+    editAssigned: function(event){
         console.log("adding editing Assigned");
         $(event.currentTarget).parent().addClass("editing-assigned");
         $(event.currentTarget).focus();
@@ -275,7 +277,8 @@ App.View = {};
 
   });
 
-
+ //View for adding new Tasks
+ 
   var TaskList = Backbone.View.extend({
     el: '#taskapp',
 
